@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--
+  Meus sites favoritos
+  Atividade da Agenda 12 - Desenvolvimento de Sistemas I.
+
+  Página que apresenta cinco sites favoritos. Cada item tem:
+  - o nome do site (tag h1), acima da imagem;
+  - a imagem do site (arquivo local na mesma pasta);
+  - o link para o site (tag a), abaixo da imagem.
+-->
+<html lang="pt-BR">
+<head>
+  <!-- Codificação de caracteres para exibir acentos corretamente. -->
+  <meta charset="UTF-8">
+
+  <!-- Faz a página se adaptar a telas de celular e computador. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título que aparece na aba do navegador. -->
+  <title>Meus sites favoritos</title>
+
+  <style>
+    /* Variáveis de cor usadas em toda a página. */
+    :root {
+      --cor-fundo: #f4f6fb;
+      --cor-texto: #1f2937;
+      --cor-destaque: #2563eb;
+      --cor-cartao: #ffffff;
+    }
+
+    /* Ajustes gerais do corpo da página. */
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+      line-height: 1.5;
+    }
+
+    /* Centraliza o conteúdo e limita a largura máxima. */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    /* Grade que organiza os cartões em colunas automáticas. */
+    .lista-sites {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    /* Cada cartão mostra nome, imagem e link de um site. */
+    .cartao {
+      background-color: var(--cor-cartao);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 16px;
+      text-align: center;
+    }
+
+    /* Nome do site, acima da imagem. */
+    .cartao h1 {
+      font-size: 1.2rem;
+      margin: 0 0 12px 0;
+      color: var(--cor-destaque);
+    }
+
+    /* Imagem ocupa a largura do cartão sem deformar. */
+    .cartao img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Link abaixo da imagem. */
+    .cartao a {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--cor-destaque);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* Destaque visual quando o cursor passa pelo link. */
+    .cartao a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Área principal do conteúdo da página. -->
+  <main class="container">
+
+    <!-- Título do corpo da página, com o nome do autor. -->
+    <header>
+      <h1>Meus sites favoritos: Ailson Lucas</h1>
+      <p>Sites que uso para estudar, trabalhar e me divertir.</p>
+    </header>
+
+    <!-- Lista não ordenada com um item para cada site favorito. -->
+    <ul class="lista-sites">
+
+      <!-- Site 1: YouTube -->
+      <li class="cartao">
+        <h1>YouTube</h1>
+        <!-- Link na imagem (opcional) e imagem local na mesma pasta. -->
+        <a href="https://www.youtube.com" target="_blank" rel="noopener">
+          <img src="img/youtube.png" alt="Logo do YouTube">
+        </a>
+        <!-- Link abaixo da imagem. -->
+        <br>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener">youtube.com</a>
+      </li>
+
+      <!-- Site 2: Crunchyroll -->
+      <li class="cartao">
+        <h1>Crunchyroll</h1>
+        <a href="https://www.crunchyroll.com" target="_blank" rel="noopener">
+          <img src="img/crunchyroll.png" alt="Logo da Crunchyroll">
+        </a>
+        <br>
+        <a href="https://www.crunchyroll.com" target="_blank" rel="noopener">crunchyroll.com</a>
+      </li>
+
+      <!-- Site 3: X -->
+      <li class="cartao">
+        <h1>X</h1>
+        <a href="https://x.com" target="_blank" rel="noopener">
+          <img src="img/x.png" alt="Logo do X">
+        </a>
+        <br>
+        <a href="https://x.com" target="_blank" rel="noopener">x.com</a>
+      </li>
+
+      <!-- Site 4: Tudo Celular -->
+      <li class="cartao">
+        <h1>Tudo Celular</h1>
+        <a href="https://tudocelular.com" target="_blank" rel="noopener">
+          <img src="img/tudocelular.png" alt="Logo do Tudo Celular">
+        </a>
+        <br>
+        <a href="https://tudocelular.com" target="_blank" rel="noopener">tudocelular.com</a>
+      </li>
+
+      <!-- Site 5: Reddit -->
+      <li class="cartao">
+        <h1>Reddit</h1>
+        <a href="https://www.reddit.com" target="_blank" rel="noopener">
+          <img src="img/reddit.png" alt="Logo do Reddit">
+        </a>
+        <br>
+        <a href="https://www.reddit.com" target="_blank" rel="noopener">reddit.com</a>
+      </li>
+
+    </ul>
+  </main>
+
+  <!-- Rodapé com informações da atividade. -->
+  <footer class="container">
+    <p>Agenda 12 - Desenvolvimento de Sistemas I</p>
+  </footer>
+</body>
+</html>
